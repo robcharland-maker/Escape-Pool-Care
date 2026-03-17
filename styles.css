@@ -891,10 +891,28 @@ a {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .nav-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .nav-links {
-        display: none; /* Hide for extreme simplicity in MVP, could add hamburger */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .brand-logo.prominent {
+        height: 100px; /* Slightly smaller on mobile to save space */
     }
     
+    /* Ensure content clears the much taller stacked mobile navbar */
+    .hero, .page-header, .contact-hero {
+        padding-top: 320px !important; 
+    }
+
     .hero-cta {
         flex-direction: column;
     }
