@@ -898,19 +898,27 @@ a {
 
     .nav-links {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         width: 100%;
-        text-align: center;
-        gap: 0.5rem;
+        gap: 1rem;
+    }
+
+    .nav-links .btn {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
     }
 
     .brand-logo.prominent {
-        height: 100px; /* Slightly smaller on mobile to save space */
+        width: 100%;
+        height: auto;
+        max-width: 350px; /* Restrict max scaling on large phones */
     }
     
-    /* Ensure content clears the much taller stacked mobile navbar */
+    /* Ensure content clears the mobile navbar, reduced because links are now horizontal */
     .hero, .page-header, .contact-hero {
-        padding-top: 320px !important; 
+        padding-top: 240px !important; 
     }
 
     .hero-cta {
